@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+    <string-array name="songs">
+        <item>
+ יש תקוה
+        </item>
+        <item>
+עם ישראל
+        </item>
+            <item>
+הפכת
+            </item>
+            <item>
+קח את שלי
+            </item>
+    </string-array>
+    <string-array name="song_desc">
+        <item>
+            בני פרידמן
+        </item>
+        <item>
+יעקב שוואקי
+        </item>
+          <item>
+אברהם פריד
+          </item>
+                  <item>
+אברהם פריד
+          </item>
+
+    </string-array>
+    <string-array name="song_details">
+        <item>
+                        בני פרידמן
+        </item>
+        <item>
+            יעקב שוואקי
+        </item>
+          <item>
+              אברהם פריד
+        </item>
+                <item>
+                    אברהם פריד
+        </item>
+
+    </string-array>
+    <string-array name="song_locations">
+        <item>8 Rue Scribe, 75009 Paris, France</item>
+        <item>Piazza del Capitolo - 50122 Florence</item>
+        <item>Piazza del Capitolo - 50122 Florence</item>
+        <item>Piazza del Capitolo - 50122 Florence</item>
+
+    </string-array>
+
+    <array name="song_picture">
+        <item>@drawable/hope</item>
+        <item>@drawable/shwaki</item>
+        <item>@drawable/hafachta</item>
+        <item>@drawable/kahetsheli</item>
+
+    </array>
+
+
+    <string-array name="stories">
+        <item>
+ כספיון
+        </item>
+        <item>
+              לקוף יש בעיה
+        </item>
+        <item>
+היום יום הולדת
+        </item>
+    </string-array>
+    <string-array name="story_desc">
+        <item>
+            הסיפור על הדג הקטן שחיפש חבר
+        </item>
+        <item>
+            הקוף שחיפש את אמא שלו
+        </item>
+        <item>
+המשפחה שרה יום הולדת
+        </item>
+
+    </string-array>
+    <string-array name="story_details">
+        <item>
+            כתב וצייר פאול קור\nמספרת, מירי, אמא של רחלי
+        </item>
+        <item>
+מאת ג\'וליה דונלדסון\nמספרת, מירי, אמא של רחלי
+        </item>
+          <item>
+              האחים של רחלי ביצירת מופת מקורית לשמח את רחלי בשיר יום ההולדת האהוב עליה במיוחד.
+        </item>
+
+    </string-array>
+    <string-array name="story_locations">
+        <item>8 Rue Scribe, 75009 Paris, France</item>
+        <item>Piazza del Capitolo - 50122 Florence</item>
+        <item>Piazza del Capitolo - 50122 Florence</item>
+
+    </string-array>
+
+    <array name="story_picture">
+        <item>@drawable/kaspion</item>
+        <item>@drawable/monkey</item>
+        <item>@drawable/racheli</item>
+
+
+    </array>
+
+    <string-array name="samples">
+        <item>
+לתופף בכיף!
+        </item>
+        <item>
+להיכנס לגרוב
+        </item>
+
+    </string-array>
+    <string-array name="sample_desc">
+        <item>
+משחק תיפוף בקצב
+        </item>
+        <item>
+להרגיש כמו DJ
+        </item>
+
+    </string-array>
+    <string-array name="sample_details">
+        <item>
+            רחלי מתופפת לפי הקצב ויוצרת יצירה חדשה
+        </item>
+        <item>
+            רחלי משלבת מקצבים כמו DJ אמיתי
+        </item>
+
+    </string-array>
+    <string-array name="sample_locations">
+        <item>8 Rue Scribe, 75009 Paris, France</item>
+        <item>Piazza del Capitolo - 50122 Florence</item>
+
+    </string-array>
+
+    <array name="sample_picture">
+        <item>@drawable/drumbs</item>
+        <item>@drawable/sample</item>
+
+    </array>
+
+</resources>

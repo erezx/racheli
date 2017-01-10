@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Musical</string>
+    <string name="item_title">Palais Garnier</string>
+    <string name="item_desc">The Palais Garnier which locates in Paris was built from 1861 for
+        the Paris Opera.
+    </string>
+    <string name="detail_desc">
+        מירי, אמא של רחלי
+    </string>
+    <string name="detail_location">"8 Rue Scribe, 75009 Paris, France"</string>
+</resources>
