@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new CardContentFragment(), "לשיר");
         adapter.addFragment(new StoryContentFragment(), "לספר");
         adapter.addFragment(new SampleContentFragment(), "לנגן");
+        adapter.addFragment(new DrawContentFragment(), "לצייר");
         viewPager.setAdapter(adapter);
     }
     static class Adapter extends FragmentPagerAdapter {

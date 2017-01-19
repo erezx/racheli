@@ -120,6 +120,23 @@ public class SampleDetailActivity extends AppCompatActivity {
 
         }
 
+        if(postion == 2) {
+            tracks[0] = R.raw.xylophone;
+            tracks[1] = R.raw.silence;
+
+
+            mPlayer = MediaPlayer.create(getApplicationContext(), tracks[currentTrack]);//Create MediaPlayer object with MP3 file under res/raw folder
+
+        }
+        if(postion == 3) {
+            tracks[0] = R.raw.shapa;
+            tracks[1] = R.raw.silence;
+
+
+            mPlayer = MediaPlayer.create(getApplicationContext(), tracks[currentTrack]);//Create MediaPlayer object with MP3 file under res/raw folder
+
+        }
+
 
         String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
         initGem(whitelist[0]);
@@ -140,8 +157,8 @@ public class SampleDetailActivity extends AppCompatActivity {
                 float q[] = data.quaternion;
                 acc = a;
                 quat = q;
-                float[] qSphere = qProjector.projectOnSphere(quat);
-                float s = (qSphere[0] + 200)/400 + 0.5f; //speed
+                float[] qSphere = qProjector.projectOnPlane(quat);
+                float s = (qSphere[1] + 200)/400 + 0.5f; //speed
                 float p = (qSphere[1] + 200)/400 + 0.5f; //pitch
 
                 Log.i("Quatation", "Speed " + s);
@@ -151,10 +168,55 @@ public class SampleDetailActivity extends AppCompatActivity {
                     float pitch = abs(p);
                     //float pitch = abs(qSphere[1]);
                     Log.i("p", "p" + p);
+                    if(speed>0.5 && speed<1.5 && p!=0) {
 
                         mPlayer.setPlaybackParams(mPlayer.getPlaybackParams().setSpeed(speed));
-                        mPlayer.setPlaybackParams(mPlayer.getPlaybackParams().setPitch(pitch));
+                        mPlayer.setPlaybackParams(mPlayer.getPlaybackParams().setPitch(speed));
+                    }
 
+                }
+                if(abs(s-1f)>0.4f) {
+
+                //    if(abs((a[0]+a[1]+a[2])/3 - 1)>0.4f) {
+                   Log.i("Motion detected", "Threshold " + abs(s-1f));
+                    //Log.i("Acceleration detected", "Threshold " + abs(a[0]+a[1]+a[2])/3);
+
+                        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                        @Override
+                        public void onCompletion(MediaPlayer arg0) {
+                            if (tracks[currentTrack] != R.raw.silence) {
+                                currentTrack++;
+                                Log.i("Track", "Value " + currentTrack);
+                                Log.i("Track", "Value " + tracks.length);
+                                mPlayer.stop();
+                                mPlayer.release();
+                                mPlayer = null;
+                                mPlayer = MediaPlayer.create(getApplicationContext(), tracks[currentTrack]);//Create MediaPlayer object with MP3 file under res/raw folder
+                                //  mPlayer.setOnCompletionListener(this);
+                                //     float speed = abs(acc[2]+1);
+                                //float pitch = 3f;
+                                //    mPlayer.setPlaybackParams(mPlayer.getPlaybackParams().setSpeed(speed));
+                                //mPlayer.setPlaybackParams(mPlayer.getPlaybackParams().setPitch(pitch));
+                                gem.calibrateAzimuth();
+                                gem.calibrateOrigin();
+
+
+                            } else {
+                                currentTrack = 0;
+                                mPlayer.stop();
+                                mPlayer.release();
+                                mPlayer = null;
+                                mPlayer = MediaPlayer.create(getApplicationContext(), tracks[currentTrack]);//Create MediaPlayer object with MP3 file under res/raw folder
+                                gem.calibrateAzimuth();
+                                gem.calibrateOrigin();
+
+                            }
+                        }
+
+
+                    });
+                    mPlayer.start();
                 }
             }
 
@@ -196,6 +258,8 @@ public class SampleDetailActivity extends AppCompatActivity {
                             mPlayer.release();
                             mPlayer = null;
                             mPlayer = MediaPlayer.create(getApplicationContext(), tracks[currentTrack]);//Create MediaPlayer object with MP3 file under res/raw folder
+                            gem.calibrateAzimuth();
+                            gem.calibrateOrigin();
 
                         }
                     }

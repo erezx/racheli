@@ -34,7 +34,7 @@ import android.widget.TextView;
 /**
  * Provides UI for the view with Cards.
  */
-public class SampleContentFragment extends Fragment {
+public class DrawContentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -60,8 +60,8 @@ public class SampleContentFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();
-                    Intent intent = new Intent(context, SampleDetailActivity.class);
-                    intent.putExtra(DetailActivity.EXTRA_POSITION, getAdapterPosition());
+                    Intent intent = new Intent(context, DrawDetailActivity.class);
+                    intent.putExtra(DrawDetailActivity.EXTRA_POSITION, getAdapterPosition());
                     context.startActivity(intent);                }
             });
         }
@@ -71,15 +71,15 @@ public class SampleContentFragment extends Fragment {
      */
     public static class ContentAdapter extends RecyclerView.Adapter<ViewHolder> {
         // Set numbers of List in RecyclerView.
-        private static final int LENGTH = 4;
+        private static final int LENGTH = 1;
         private final String[] mPlaces;
         private final String[] mPlaceDesc;
         private final Drawable[] mPlacePictures;
         public ContentAdapter(Context context) {
             Resources resources = context.getResources();
-            mPlaces = resources.getStringArray(R.array.samples);
-            mPlaceDesc = resources.getStringArray(R.array.sample_desc);
-            TypedArray a = resources.obtainTypedArray(R.array.sample_picture);
+            mPlaces = resources.getStringArray(R.array.draw);
+            mPlaceDesc = resources.getStringArray(R.array.draw_desc);
+            TypedArray a = resources.obtainTypedArray(R.array.draw_picture);
             mPlacePictures = new Drawable[a.length()];
             for (int i = 0; i < mPlacePictures.length; i++) {
                 mPlacePictures[i] = a.getDrawable(i);

@@ -133,6 +133,12 @@
         <item>
 להיכנס לגרוב
         </item>
+                <item>
+קסילופון
+                </item>
+                        <item>
+לשלוט בקצב
+        </item>
 
     </string-array>
     <string-array name="sample_desc">
@@ -142,7 +148,12 @@
         <item>
 להרגיש כמו DJ
         </item>
-
+     <item>
+לנגן בקסילופון
+     </item>
+     <item>
+לשלוט בקצב ובצליל של השיר
+        </item>
     </string-array>
     <string-array name="sample_details">
         <item>
@@ -151,10 +162,18 @@
         <item>
             רחלי משלבת מקצבים כמו DJ אמיתי
         </item>
+                <item>
+רחלי משחקת עם הצלילים בקסילופון
+        </item>
+                <item>
+רחלי שולטת בקצב ובצליל של השיר
+        </item>
 
     </string-array>
     <string-array name="sample_locations">
         <item>8 Rue Scribe, 75009 Paris, France</item>
+        <item>Piazza del Capitolo - 50122 Florence</item>
+        <item>Piazza del Capitolo - 50122 Florence</item>
         <item>Piazza del Capitolo - 50122 Florence</item>
 
     </string-array>
@@ -162,7 +181,40 @@
     <array name="sample_picture">
         <item>@drawable/drumbs</item>
         <item>@drawable/sample</item>
+        <item>@drawable/xylophone</item>
+        <item>@drawable/distortion</item>
 
     </array>
+
+    <string-array name="draw">
+        <item>
+שירבוטים
+        </item>
+
+    </string-array>
+    <string-array name="draw_desc">
+        <item>
+מציירים חופשי
+        </item>
+
+    </string-array>
+    <string-array name="draw_details">
+        <item>
+רחלי מזיזה את המכחול ומציירת בכיף
+        </item>
+
+    </string-array>
+    <string-array name="draw_locations">
+        <item>8 Rue Scribe, 75009 Paris, France</item>
+
+
+    </string-array>
+
+    <array name="draw_picture">
+        <item>@drawable/scribble</item>
+
+
+    </array>
+
 
 </resources>

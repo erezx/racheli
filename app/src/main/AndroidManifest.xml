@@ -28,20 +28,21 @@
             android:name="com.example.erez.racheli2.SongDetailActivity"
             android:parentActivityName="com.example.erez.racheli2.MainActivity">
             <meta-data
-                android:name="a
-
-
-                ndroid.support.PARENT_ACTIVITY"
+                android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
             android:name="com.example.erez.racheli2.SampleDetailActivity"
             android:parentActivityName="com.example.erez.racheli2.MainActivity">
             <meta-data
-                android:name="a
-
-
-                ndroid.support.PARENT_ACTIVITY"
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.erez.racheli2.DrawDetailActivity"
+            android:parentActivityName="com.example.erez.racheli2.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
     </application>
