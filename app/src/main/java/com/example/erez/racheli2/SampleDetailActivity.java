@@ -138,8 +138,8 @@ public class SampleDetailActivity extends AppCompatActivity {
         }
 
 
-        String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
-        initGem(whitelist[0]);
+      //  String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
+        initGem("D0:B5:C2:90:7C:2E");
         gem.calibrateAzimuth();
         gem.calibrateOrigin();
         qProjector = new QuaternionProjector(200f);
@@ -303,17 +303,17 @@ public class SampleDetailActivity extends AppCompatActivity {
         //Bind the Gem Service to the app
         GemManager.getDefault().bindService(this);
         //Get list of addresses from the utility app
-        String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
+     //   String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
 
-        if(whitelist.length > 0) {
+       // if(whitelist.length > 0) {
             //If white list has been changed disconnect old one
-            if(gem != null && !whitelist[0].equals(gem.getAddress())) {
-                GemManager.getDefault().releaseGem(gem);
-            }
+         //   if(gem != null && !whitelist[0].equals(gem.getAddress())) {
+           //     GemManager.getDefault().releaseGem(gem);
+            //}
 
             //It's possible to call it in OnCreate() if white list is not supposed to be changed
-            initGem(whitelist[0]);
-        }
+            initGem("D0:B5:C2:90:7C:2E");
+        //}
     }
 
     @Override
@@ -321,5 +321,6 @@ public class SampleDetailActivity extends AppCompatActivity {
         super.onPause();
         //Unbind Gem Service from the application
         GemManager.getDefault().unbindService(this);
+
     }
 }

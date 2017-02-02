@@ -137,8 +137,8 @@ public class SongDetailActivity extends AppCompatActivity {
 
         }
 
-        String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
-        initGem(whitelist[0]);
+      //  String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
+        initGem("D0:B5:C2:90:7C:2E");
         gem.calibrateAzimuth();
         gem.calibrateOrigin();
         qProjector = new QuaternionProjector(200f);
@@ -269,7 +269,7 @@ public class SongDetailActivity extends AppCompatActivity {
         //Bind the Gem Service to the app
         GemManager.getDefault().bindService(this);
         //Get list of addresses from the utility app
-        String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
+    /*    String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
 
         if(whitelist.length > 0) {
             //If white list has been changed disconnect old one
@@ -277,9 +277,9 @@ public class SongDetailActivity extends AppCompatActivity {
                 GemManager.getDefault().releaseGem(gem);
             }
 
-            //It's possible to call it in OnCreate() if white list is not supposed to be changed
-            initGem(whitelist[0]);
-        }
+            //It's possible to call it in OnCreate() if white list is not supposed to be changed*/
+            initGem("D0:B5:C2:90:7C:2E");
+//        }
     }
 
     @Override
@@ -287,6 +287,6 @@ public class SongDetailActivity extends AppCompatActivity {
         super.onPause();
         //Unbind Gem Service from the application
         GemManager.getDefault().unbindService(this);
-    }
 
+    }
 }
