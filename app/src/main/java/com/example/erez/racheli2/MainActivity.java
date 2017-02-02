@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Get white list of addresses form the utility app
-        String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
-        initGem(whitelist[0]);
+     //   String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
+        initGem("00:80:98:DC:9E:5D");
 // Adding Floating Action Button to bottom right of main view
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -162,17 +162,17 @@ public class MainActivity extends AppCompatActivity {
         //Bind the Gem Service to the app
         GemManager.getDefault().bindService(this);
         //Get list of addresses from the utility app
-        String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
+    //    String[] whitelist = GemSDKUtilityApp.getWhiteList(this);
 
-        if(whitelist.length > 0) {
+      //  if(whitelist.length > 0) {
             //If white list has been changed disconnect old one
-            if(gem != null && !whitelist[0].equals(gem.getAddress())) {
-                GemManager.getDefault().releaseGem(gem);
-            }
+        //    if(gem != null && !whitelist[0].equals(gem.getAddress())) {
+          //      GemManager.getDefault().releaseGem(gem);
+      //      }
 
             //It's possible to call it in OnCreate() if white list is not supposed to be changed
-            initGem(whitelist[0]);
-        }
+            initGem("00:80:98:DC:9E:5D");
+    //   }
     }
 
     @Override
